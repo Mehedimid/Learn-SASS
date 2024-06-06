@@ -1,0 +1,15 @@
+@import './resests' ;
+@import './variables';
+
+
+$font-weights:(
+    'regular':400,
+    'medium':500,
+    'bold':700
+);
+
+body{
+    background-color: black;
+    color: $text-color;
+    font-weight: map-get($font-weights, regular );
+}
