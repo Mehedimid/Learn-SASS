@@ -1,21 +1,45 @@
-$myFont: Helvetica, sans-serif;
-$myColor: red;
-$myFontSize: 18px;
-$myWidth: 680px;
-$navbarNameColor:green;
+@import "variables"
 
-nav ul {
+@mixin list-style {
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  color: bisque;
+}
 
+@mixin flex-display {
   display: flex;
 }
-h1{
-  color: green;
+
+@mixin all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-// nav li {
-//   display: inline-block;
-// }
-// nav a {
-//   display: block;
-//   padding: 6px 12px;
-//   text-decoration: none;
-// }                  
+
+body {
+  color: white;
+  background-color: black;
+}
+
+nav {
+  h1 {
+    color: $logoColor;
+    font-size: $logoFont ; 
+  }
+  div {
+    border-bottom: 2px white solid;
+    @include all-center();
+  }
+  ul {
+    gap: 15px;
+    @include all-center();
+  }
+  a {
+    @include list-style();
+  }
+  li {
+    @include list-style();
+  }
+  @include all-center();
+}
